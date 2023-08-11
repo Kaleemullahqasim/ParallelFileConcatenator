@@ -1,12 +1,12 @@
 # ParallelFileConcatenator
 
 ## Overview
-`ParallelFileConcatenator` is a robust tool designed to efficiently combine data files of various formats (CSV, Feather, Parquet, XLSX, XLS) from a specified directory. It intelligently filters out duplicate files, merges files with matching column headers, and saves the combined data into a compressed Parquet file.
+`ParallelFileConcatenator` is a robust tool designed to efficiently combine data files of various formats (CSV, Feather, Parquet, XLSX, XLS) from a specified directory. It intelligently filters out duplicate files, merges file with matching column headers, and saves the combined data into a compressed Parquet file.
 
 
 ## Features
 - **File Hashing:** Efficiently identifies duplicate files through hashing, minimizing redundant processing.
-- **Parallel Processing:** Utilizes parallel processing for faster reading and combining of large datasets.
+- **Parallel Processing:** Utilizes parallel processing for faster reading and combining large datasets.
 - **Flexible Formats:** Supports merging of CSV, Feather, and Parquet file formats.
 - **Duplicate Removal:** Filters out duplicate rows within the combined dataframe.
 - **Space Saving:** Saves the combined data in compressed Parquet format, conserving storage space.
@@ -32,4 +32,4 @@ Feel free to fork the repository, make changes, and submit pull requests. For ma
 This project is licensed under the MIT License. See the LICENSE.md file for details.
 
 ## Contact
-For any inquiries, issues, or support, please contact the repository owner.
+For any inquiries, issues, or support, don't hesitate to get in touch with the repository owner.
