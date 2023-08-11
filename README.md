@@ -18,9 +18,10 @@
 
 ## Usage
 1. Clone the repository to your local machine.
-2. Navigate to the directory containing the Python script.
-3. Run the script: python ParallelFileConcatenator.py
-4. Follow the prompt to enter the path to the parent folder containing the data files you wish to combine.
+2. Before running the script, install the required dependencies. In the project directory, run the following command: pip install -r requirements.txt
+3. Navigate to the directory containing the Python script.
+4. Run the script: python ParallelFileConcatenator.py
+5. Follow the prompt to enter the path to the parent folder containing the data files you wish to combine.
 
 ## Output
 The script will save the combined data as combined_data.parquet (or a custom name) in the same directory. It will also print statistics regarding the total number of files processed, total rows, duplicated files, and the amount of space saved.
