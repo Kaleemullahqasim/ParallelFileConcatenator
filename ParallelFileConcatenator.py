@@ -92,8 +92,20 @@ def combine_files(folder_path, output_file_name='combined_data.parquet', file_ty
     return stats
 
 if __name__ == "__main__":
+    print("\033[1;31m" + r"""
+      _____                _ _      _ ______ _ _       _____                      _                   _             
+     |  __ \              | | |    | |  ____(_) |     / ____|                    | |                 | |            
+     | |__) |_ _ _ __ __ _| | | ___| | |__   _| | ___| |     ___  _ __   ___ __ _| |_ ___ _ __   __ _| |_ ___  _ __ 
+     |  ___/ _` | '__/ _` | | |/ _ \ |  __| | | |/ _ \ |    / _ \| '_ \ / __/ _` | __/ _ \ '_ \ / _` | __/ _ \| '__|
+     | |  | (_| | | | (_| | | |  __/ | |    | | |  __/ |___| (_) | | | | (_| (_| | ||  __/ | | | (_| | || (_) | |   
+     |_|   \__,_|_|  \__,_|_|_|\___|_|_|    |_|_|\___|\_____\___/|_| |_|\___\__,_|\__\___|_| |_|\__,_|\__\___/|_|   
+                                                                                                                
+                                                                                                                
+    """ + "\033[0m")
+
     logging.basicConfig(level=logging.INFO)
     folder_path = input("Please enter the path to the parent folder: ")
     stats = combine_files(folder_path)
+
     for key, value in stats.items():
         logging.info(f'{key}: {value}')
