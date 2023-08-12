@@ -21,10 +21,11 @@
 
 ## Usage
 1. Clone the repository to your local machine.
-3. Navigate to the directory containing the Python script.
-4. In the project directory, run the following command: pip install -r requirements.txt
+3. Navigate to the directory containing the Python script (ParallelFileConcatenator.py).
+4. In the project directory, run : pip install -r requirements.txt
 5. Run the script: python ParallelFileConcatenator.py
-6. Follow the prompt to enter the path to the parent folder containing the data files you wish to combine.
+6. Follow the prompt to enter the path to the parent folder containing the data files you wish to combine (e.g., C:\Users\JohnDoe\Documents\Datasets).
+
 
 
 ## Why This Tool?
