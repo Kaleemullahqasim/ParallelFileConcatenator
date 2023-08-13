@@ -17,6 +17,8 @@
 - pandas
 - tqdm
 - pyarrow (for reading/writing Feather and Parquet files)
+- openpyxl (for reading/writing Excel files)
+- prettytable (for printing statistics)
 
 
 ## Usage
@@ -43,7 +45,7 @@ The purpose of building this tool is to tackle these challenges by streamlining 
 
 
 ## Output
-The script will save the combined data as combined_data.parquet (or a custom name) in the same directory. It will also print statistics regarding the total number of files processed, total rows, duplicated files, and the amount of space saved.
+The script will save the combined data as "combined_data.parquet" (or a custom name) in the same directory. It will also print statistics regarding the total number of files processed, total rows, duplicated files, and the amount of space saved.
 
 ## Contributing
 Feel free to fork the repository, make changes, and submit pull requests. For major changes, please open an issue first to discuss the proposed change.
