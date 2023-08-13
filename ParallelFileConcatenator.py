@@ -4,6 +4,7 @@ import hashlib
 import logging
 from tqdm import tqdm
 from multiprocessing import cpu_count, Pool
+from prettytable import PrettyTable
 
 def get_file_hash(file_path):
     hash_obj = hashlib.md5()
@@ -44,7 +45,8 @@ def process_file(args):
     return None
 
 def combine_files(folder_path, output_file_name='combined_data.parquet', file_types=['.csv', '.feather', '.parquet', 'xlsx', 'xls' , '.json', '.pickle', '.hdf']):
-    logging.info("Combining files in the folder " + folder_path)
+    logging.info("\033[1;34mCombining files in the folder " + folder_path + "\033[0m")
+
 
     stats = {
         'total_files': 0,
@@ -103,9 +105,15 @@ if __name__ == "__main__":
                                                                                                                 
     """ + "\033[0m")
 
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.INFO, format='%(message)s')
     folder_path = input("Please enter the path to the parent folder: ")
     stats = combine_files(folder_path)
 
+    # Displaying the summary as a table
+    summary_table = PrettyTable()
+    summary_table.field_names = ["Metric", "Value"]
     for key, value in stats.items():
-        logging.info(f'{key}: {value}')
+        summary_table.add_row([key, value])
+
+    print("\033[1;32mSummary of File Processing:\033[0m")
+    print(summary_table)
