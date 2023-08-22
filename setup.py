@@ -4,6 +4,7 @@ requirements = []
 with open('requirements.txt') as f:
     requirements = f.readlines()
 
+
 setup(
     name='ParallelFileConcatenator',
     version='0.1',
@@ -29,5 +30,6 @@ setup(
     packages=find_packages(),
     install_requires=requirements,
     python_requires='>=3.8'
+
 )
- 
+
